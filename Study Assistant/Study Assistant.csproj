@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{42B00441-B736-427F-A4B7-223C0EC010F0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Study_Assistant</RootNamespace>
+    <AssemblyName>Study Assistant</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>SAV_1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.4.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.4\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animation.cs" />
+    <Compile Include="BulletS.cs" />
+    <Compile Include="Bullet.cs" />
+    <Compile Include="BulletSimple.cs" />
+    <Compile Include="FormGamePlay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGamePlay.Designer.cs">
+      <DependentUpon>FormGamePlay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Skin.cs" />
+    <Compile Include="BulletTwoRays.cs" />
+    <Compile Include="Enemy.cs" />
+    <Compile Include="Firgure.cs" />
+    <Compile Include="FirstAidItem.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="LevelGame.cs" />
+    <Compile Include="LoadData.cs" />
+    <Compile Include="UpgradeItem.cs" />
+    <Compile Include="LoadingGame.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Zombie.cs" />
+    <Compile Include="AmmoItem.cs" />
+    <Compile Include="coso.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="coso.Designer.cs">
+      <DependentUpon>coso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOptions.Designer.cs">
+      <DependentUpon>FormOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="giohoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="giohoc.Designer.cs">
+      <DependentUpon>giohoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaMH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MaMH.Designer.cs">
+      <DependentUpon>MaMH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="nhom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="nhom.Designer.cs">
+      <DependentUpon>nhom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="phonghoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="phonghoc.Designer.cs">
+      <DependentUpon>phonghoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ForecastUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ForecastUC.Designer.cs">
+      <DependentUpon>ForecastUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TenMH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TenMH.Designer.cs">
+      <DependentUpon>TenMH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="thu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="thu.Designer.cs">
+      <DependentUpon>thu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tiet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tiet.Designer.cs">
+      <DependentUpon>tiet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tinchi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tinchi.Designer.cs">
+      <DependentUpon>Tinchi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tuanhoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tuanhoc.Designer.cs">
+      <DependentUpon>tuanhoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WeatherForecast.cs" />
+    <Compile Include="WeatherInfo.cs" />
+    <EmbeddedResource Include="coso.resx">
+      <DependentUpon>coso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForecastUC.resx">
+      <DependentUpon>ForecastUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGamePlay.resx">
+      <DependentUpon>FormGamePlay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOptions.resx">
+      <DependentUpon>FormOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="giohoc.resx">
+      <DependentUpon>giohoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaMH.resx">
+      <DependentUpon>MaMH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nhom.resx">
+      <DependentUpon>nhom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="phonghoc.resx">
+      <DependentUpon>phonghoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TenMH.resx">
+      <DependentUpon>TenMH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="thu.resx">
+      <DependentUpon>thu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tiet.resx">
+      <DependentUpon>tiet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tinchi.resx">
+      <DependentUpon>Tinchi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tuanhoc.resx">
+      <DependentUpon>tuanhoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include=".editorconfig" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Data\Database.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Database_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Database.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\a1.png" />
+    <None Include="Resources\a2.png" />
+    <None Include="Resources\a3.png" />
+    <None Include="Resources\a4.png" />
+    <None Include="Resources\a5.png" />
+    <None Include="Resources\a6.png" />
+    <None Include="Resources\a7.png" />
+    <None Include="Resources\a8.png" />
+    <None Include="Resources\a9.png" />
+    <None Include="Resources\a10.png" />
+    <None Include="Resources\a11.png" />
+    <None Include="Resources\a12.png" />
+    <None Include="Resources\a13.png" />
+    <None Include="Resources\a14.png" />
+    <None Include="Resources\a15.png" />
+    <None Include="Resources\a16.png" />
+    <None Include="Resources\a17.png" />
+    <None Include="Resources\a18.png" />
+    <None Include="Resources\a19.png" />
+    <None Include="Resources\a20.png" />
+    <None Include="Resources\about.png" />
+    <None Include="Resources\about2.bmp" />
+    <None Include="Resources\about2.png" />
+    <None Include="Resources\aplayer1.png" />
+    <None Include="Resources\aplayer2.png" />
+    <None Include="Resources\aplayer3.png" />
+    <Content Include="Resources\backward-solid.jpg" />
+    <None Include="Resources\bgrLG.png" />
+    <None Include="Resources\bgEnd.jpg" />
+    <None Include="Resources\bgEnd2.png" />
+    <None Include="Resources\bgGame.png" />
+    <None Include="Resources\bgLogin.jpg" />
+    <None Include="Resources\bgrLG11.png" />
+    <None Include="Resources\btnAbout.png" />
+    <None Include="Resources\btnBack.png" />
+    <None Include="Resources\btnCharacter.png" />
+    <None Include="Resources\btNewGame.png" />
+    <None Include="Resources\btnHighScore.png" />
+    <None Include="Resources\btnHome.png" />
+    <None Include="Resources\btnOK.png" />
+    <None Include="Resources\btnPlay.png" />
+    <None Include="Resources\btnQuit.png" />
+    <None Include="Resources\btnReplay.png" />
+    <None Include="Resources\btnResume.png" />
+    <None Include="Resources\btnStart.png" />
+    <None Include="Resources\btReturn.png" />
+    <None Include="Resources\btSelect.png" />
+    <None Include="Resources\btStart.png" />
+    <None Include="Resources\circleblue.png" />
+    <None Include="Resources\dead.png" />
+    <None Include="Resources\Exit %281%29.png" />
+    <None Include="Resources\burst.wav" />
+    <None Include="Resources\bright-wallpaper-33.jpg" />
+    <Content Include="Resources\expand-solid.jpg" />
+    <None Include="Resources\firedown.png" />
+    <None Include="Resources\fireleft.png" />
+    <None Include="Resources\fireright.png" />
+    <None Include="Resources\fireup.png" />
+    <None Include="Resources\firstaid.png" />
+    <Content Include="Resources\forward-solid.jpg" />
+    <None Include="Resources\Home %281%29.png" />
+    <Content Include="Resources\list-solid.jpg" />
+    <None Include="Resources\Pause %281%29.png" />
+    <Content Include="Resources\pause-solid.jpg" />
+    <None Include="Resources\pauseIm.png" />
+    <None Include="Resources\picHighScore.png" />
+    <None Include="Resources\picHome.png" />
+    <None Include="Resources\picWR.jpg" />
+    <Content Include="Resources\play-solid.jpg" />
+    <None Include="Resources\player2down.png" />
+    <None Include="Resources\player2left.png" />
+    <None Include="Resources\player2right.png" />
+    <None Include="Resources\player2up.png" />
+    <None Include="Resources\player3down.png" />
+    <None Include="Resources\player3left.png" />
+    <None Include="Resources\player3right.png" />
+    <None Include="Resources\player3up.png" />
+    <None Include="Resources\Reload %281%29.png" />
+    <None Include="Resources\rocketred.png" />
+    <None Include="Resources\slPlayer1.png" />
+    <None Include="Resources\slPlayer2.png" />
+    <None Include="Resources\slPlayer3.png" />
+    <None Include="Resources\slPlayer4.png" />
+    <None Include="Resources\superHerodown.png" />
+    <None Include="Resources\superheroLeft.png" />
+    <None Include="Resources\superHeroright.png" />
+    <None Include="Resources\superHeroup.png" />
+    <None Include="Resources\tinydown.png" />
+    <None Include="Resources\tinyleft.png" />
+    <None Include="Resources\tinyright.png" />
+    <None Include="Resources\tinyup.png" />
+    <None Include="Resources\Universe-art-the-universe-22238785-1920-1200.jpg" />
+    <None Include="Resources\upgrade.png" />
+    <None Include="Resources\shoot.wav" />
+    <None Include="Resources\player4down.png" />
+    <None Include="Resources\player4left.png" />
+    <None Include="Resources\player4right.png" />
+    <None Include="Resources\player4up.png" />
+    <Content Include="Resources\volume-down-solid.jpg" />
+    <Content Include="Resources\volume-up-solid.jpg" />
+    <None Include="Resources\x5.png" />
+    <None Include="Resources\x10.png" />
+    <None Include="Resources\x20.png" />
+    <None Include="Resources\zombie1down.png" />
+    <None Include="Resources\zombie1left.png" />
+    <None Include="Resources\zombie1right.png" />
+    <None Include="Resources\zombie1up.png" />
+    <None Include="Resources\zombie2down.png" />
+    <None Include="Resources\zombie2left.png" />
+    <None Include="Resources\zombie2right.png" />
+    <None Include="Resources\zombie2up.png" />
+    <None Include="Resources\zombie3down.png" />
+    <None Include="Resources\zombie3left.png" />
+    <None Include="Resources\zombie3right.png" />
+    <None Include="Resources\zombie3up.png" />
+    <None Include="Resources\zombieshooter.png" />
+    <Content Include="SAV_1.ico" />
+    <Content Include="weather.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
